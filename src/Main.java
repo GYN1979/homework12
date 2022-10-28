@@ -26,24 +26,29 @@ public class Main {
 
     //Task3
     public static void calculateDeliveryDay(int deliveryDistance, int daysDelivery) {
+        if (deliveryDistance < 20) {
+            System.out.println("Доставка 1 день");
+        }
         if (deliveryDistance >= 20 && deliveryDistance < 60) {
-            daysDelivery++;
+            System.out.println("Доставка 2 дня");
         }
         if (deliveryDistance >= 60 && deliveryDistance <= 100) {
-            daysDelivery++;
-            System.out.println("Потребуется дней: " + daysDelivery);
-
-        } else if (deliveryDistance > 100) {
+            System.out.println("Доставка 3 дня");
+        }
+        if (deliveryDistance > 100) {
             System.out.println(" Не обслуживаем");
         }
     }
+
         public static void main (String[]args){
             printyearIsLeap(2021);
             checkOS(1, 2020);
-            calculateDeliveryDay(110, 1);
+            calculateDeliveryDay(105, 1);
 
         }
     }
+
+
 
 
 
